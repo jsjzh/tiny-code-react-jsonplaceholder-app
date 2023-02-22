@@ -3,7 +3,7 @@ import React, { lazy, Suspense } from "react";
 import Loading from "@/components/Loading";
 
 import Blank from "@/pages/_layouts/Blank";
-import Container from "@/pages/_layouts/Container";
+import Main from "@/pages/_layouts/Main";
 
 const Login = lazy(() => import("@/pages/Login"));
 const Post = lazy(() => import("@/pages/Post"));
@@ -41,7 +41,7 @@ const routes: IRoute[] = [
   {
     title: "应用",
     path: "/",
-    element: <Container />,
+    element: <Main />,
     children: [
       { title: "文章列表", path: "/", element: lazyLoad(<Post />) },
       {
@@ -77,7 +77,7 @@ const routes: IRoute[] = [
     hide: true,
     title: "结果页",
     path: "/results",
-    element: <Container />,
+    element: <Main />,
     children: [
       {
         title: "无权限",

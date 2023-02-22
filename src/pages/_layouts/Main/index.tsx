@@ -4,10 +4,10 @@ import { Outlet } from "react-router-dom";
 
 interface IProps {}
 
-const Blank: React.FC<IProps> = (props) => (
-  <Container disableGutters>
+const Main: React.FC<IProps> = (props) => (
+  <Container>
     <Outlet />
   </Container>
 );
 
-export default Blank;
+export default Main;
