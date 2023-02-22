@@ -1,0 +1,56 @@
+{
+  "name": "tiny-code-react-jsonplaceholder-app",
+  "private": true,
+  "version": "0.0.1",
+  "description": "tiny-code-react-jsonplaceholder-app",
+  "type": "module",
+  "keywords": [
+    "tiny-code"
+  ],
+  "author": "jsjzh <kimimi_king@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "pnpm run dev",
+    "dev": "vite --port 8080 --open",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsjzh/tiny-code-react-jsonplaceholder-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsjzh/tiny-code-react-jsonplaceholder-app/issues"
+  },
+  "homepage": "https://github.com/jsjzh/tiny-code-react-jsonplaceholder-app#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@tanstack/react-query": "^4.24.9",
+    "axios": "^1.3.3",
+    "immer": "^9.0.19",
+    "jsonp": "^0.2.1",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "query-string": "^8.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "zustand": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/jsonp": "^0.2.1",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.34.0",
+    "eslint-config-alloy": "^4.9.0",
+    "eslint-plugin-react": "^7.32.2",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.3"
+  }
+}
