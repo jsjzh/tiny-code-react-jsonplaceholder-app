@@ -4,12 +4,12 @@ import PageWrapper from "@/components/PageWrapper";
 
 interface IProps {}
 
-const Template: React.FC<IProps> = (props) => {
+const Login: React.FC<IProps> = (props) => {
   return (
     <PageWrapper>
-      <div>Template</div>
+      <div>Login</div>
     </PageWrapper>
   );
 };
 
-export default Template;
+export default Login;

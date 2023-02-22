@@ -1,6 +1,5 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-
 import routes, { IRoute } from "@/routes";
 
 const createLinks = (routes: IRoute[]) => {
@@ -23,7 +22,7 @@ const createLinks = (routes: IRoute[]) => {
   return results;
 };
 
-const LayoutContainer: React.FC = () => {
+const Container: React.FC = () => {
   return (
     <div>
       <div>{createLinks(routes)}</div>
@@ -33,4 +32,4 @@ const LayoutContainer: React.FC = () => {
   );
 };
 
-export default LayoutContainer;
+export default Container;

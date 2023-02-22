@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-const LayoutBlank: React.FC = () => <Outlet />;
+interface IProps {}
 
-export default LayoutBlank;
+const Blank: React.FC<IProps> = (props) => <Outlet />;
+
+export default Blank;
