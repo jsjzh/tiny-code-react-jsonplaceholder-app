@@ -14,11 +14,11 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <HashRouter>
       <QueryClientProvider client={queryClient}>
         <App />
       </QueryClientProvider>
     </HashRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );

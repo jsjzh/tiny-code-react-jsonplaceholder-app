@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 interface IProps {}
 
 const Blank: React.FC<IProps> = (props) => (
-  <Container disableGutters>
+  <Container disableGutters maxWidth="xs">
     <Outlet />
   </Container>
 );

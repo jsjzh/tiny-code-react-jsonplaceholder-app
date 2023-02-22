@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-
 import PageWrapper from "@/components/PageWrapper";
 import {
+  Button,
+  createStyles,
   FormControl,
   InputLabel,
   makeStyles,
@@ -9,38 +10,60 @@ import {
   Select,
 } from "@material-ui/core";
 import { useQuery } from "@tanstack/react-query";
+import { allAPI } from "@/api";
+import Loading from "@/components/Loading";
+import { useGlobalStore } from "@/store";
+import { useNavigate } from "react-router-dom";
 
 interface IProps {}
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-    height: "100%",
-  },
-  logoBox: {
-    height: "20rem",
-    backgroundColor: "#eee",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  logo: {
-    backgroundColor: "#eff",
-    width: "10rem",
-    height: "10rem",
-    borderRadius: "50%",
-  },
-  selectBox: {},
-}));
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {},
+    logoBox: {
+      height: "20rem",
+      backgroundColor: "#eee",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    logo: {
+      backgroundColor: "#eff",
+      width: "10rem",
+      height: "10rem",
+      borderRadius: "50%",
+    },
+    selectBox: {
+      marginTop: "5rem",
+      textAlign: "center",
+    },
+    enterBox: {
+      marginTop: "9rem",
+      textAlign: "center",
+    },
+  })
+);
 
 const Login: React.FC<IProps> = (props) => {
   const classes = useStyles();
+  const [id, setId] = useState(1);
 
-  // const {} = useQuery({queryKey:[], quer})
+  const setCurrentUser = useGlobalStore((state) => state.setCurrentUser);
+  const navigate = useNavigate();
 
-  const [id, setId] = useState();
+  const { data, isLoading } = useQuery({
+    queryKey: ["getUsers"],
+    queryFn: () => allAPI.getUsers(),
+  });
 
-  const handleChange = () => {};
+  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setId(event.target.value as number);
+  };
+
+  const handleLogin = () => {
+    setCurrentUser(data?.find((item) => item.id === id) || {});
+    navigate("/");
+  };
 
   return (
     <PageWrapper>
@@ -48,21 +71,39 @@ const Login: React.FC<IProps> = (props) => {
         <div className={classes.logoBox}>
           <div className={classes.logo}></div>
         </div>
-        <div className={classes.selectBox}>
-          <FormControl>
-            <InputLabel id="select-user">选择用户</InputLabel>
-            <Select
-              labelId="select-user"
-              id="select-user"
-              value={id}
-              onChange={handleChange}
-            >
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
-          </FormControl>
-        </div>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <div className={classes.selectBox}>
+              <FormControl style={{ width: "80%" }}>
+                <InputLabel id="select-user">选择用户</InputLabel>
+                <Select
+                  labelId="select-user"
+                  value={id}
+                  onChange={handleChange}
+                >
+                  {data?.map((item) => (
+                    <MenuItem key={item.id} value={item.id}>
+                      {item.name}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </div>
+
+            <div className={classes.enterBox}>
+              <Button
+                style={{ width: "80%" }}
+                variant="contained"
+                color="primary"
+                onClick={handleLogin}
+              >
+                login
+              </Button>
+            </div>
+          </>
+        )}
       </div>
     </PageWrapper>
   );
