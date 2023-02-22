@@ -12,6 +12,10 @@
 6. lodash immer use-immer
 7. ahooks react-dnd
 
+升级 UI 到 5.x 版本
+
+<!-- https://mui.com/material-ui/getting-started/installation/ -->
+
 animation: framer-motion + Three.js
 Router: react-router-dom
 form: formik+yup
