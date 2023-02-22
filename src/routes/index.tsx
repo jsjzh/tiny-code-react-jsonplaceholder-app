@@ -40,22 +40,22 @@ const routes: IRoute[] = [
   },
   {
     title: "结果页",
-    path: "/result",
+    path: "/results",
     element: <LayoutBlank />,
     children: [
       {
         title: "无权限",
-        path: "/result/403",
+        path: "/results/403",
         element: lazyLoad(<NotAuthorized />),
       },
       {
         title: "未知错误",
-        path: "/result/404",
+        path: "/results/404",
         element: lazyLoad(<NotFound />),
       },
       {
         title: "服务器出错",
-        path: "/result/500",
+        path: "/results/500",
         element: lazyLoad(<ServerError />),
       },
     ],
