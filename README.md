@@ -2,6 +2,18 @@
 
 ## 说明
 
+## 待办
+
+1. [ ] 升级 UI 到 5.x 版本
+   1. https://mui.com/material-ui/getting-started/installation/
+2. [ ] 登录页
+3. [ ] 文章列表页
+4. [ ] 文章详情页
+5. [ ] 相册列表页
+6. [ ] 相册详情页
+7. [ ] TODO 列表页
+8. [ ] 个人中心
+
 ## 草稿
 
 1. react18
@@ -11,10 +23,6 @@
 5. zustand ~~jotai valtio RTK~~
 6. lodash immer use-immer
 7. ahooks react-dnd
-
-升级 UI 到 5.x 版本
-
-<!-- https://mui.com/material-ui/getting-started/installation/ -->
 
 animation: framer-motion + Three.js
 Router: react-router-dom
