@@ -12,9 +12,34 @@ import { allAPI } from "@/api";
 import Loading from "@/components/Loading";
 import { useGlobalStore } from "@/store";
 import { useNavigate } from "react-router-dom";
-import { css } from "@emotion/react";
+import styled from "styled-components";
 
-console.log(css());
+const Root = styled.div``;
+
+const LogoBox = styled.div`
+  height: 20rem;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Logo = styled.div`
+  background-color: #eff;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+`;
+
+const SelectBox = styled.div`
+  margin-top: 5rem;
+  text-align: center;
+`;
+
+const EnterBox = styled.div`
+  margin-top: 9rem;
+  text-align: center;
+`;
 
 interface IProps {}
 
@@ -41,15 +66,15 @@ const Login: React.FC<IProps> = (props) => {
 
   return (
     <PageWrapper>
-      <div className={classes.root}>
-        <div className={classes.logoBox}>
-          <div className={classes.logo}></div>
-        </div>
+      <Root>
+        <LogoBox>
+          <Logo>logo</Logo>
+        </LogoBox>
         {isLoading ? (
           <Loading />
         ) : (
           <>
-            <div className={classes.selectBox}>
+            <SelectBox>
               <FormControl style={{ width: "80%" }}>
                 <InputLabel id="select-user">选择用户</InputLabel>
                 <Select
@@ -64,9 +89,9 @@ const Login: React.FC<IProps> = (props) => {
                   ))}
                 </Select>
               </FormControl>
-            </div>
+            </SelectBox>
 
-            <div className={classes.enterBox}>
+            <EnterBox>
               <Button
                 style={{ width: "80%" }}
                 variant="contained"
@@ -75,10 +100,10 @@ const Login: React.FC<IProps> = (props) => {
               >
                 login
               </Button>
-            </div>
+            </EnterBox>
           </>
         )}
-      </div>
+      </Root>
     </PageWrapper>
   );
 };
