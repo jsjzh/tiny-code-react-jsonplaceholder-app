@@ -2,50 +2,24 @@ import React, { useState } from "react";
 import PageWrapper from "@/components/PageWrapper";
 import {
   Button,
-  createStyles,
   FormControl,
   InputLabel,
-  makeStyles,
   MenuItem,
   Select,
-} from "@material-ui/core";
+} from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { allAPI } from "@/api";
 import Loading from "@/components/Loading";
 import { useGlobalStore } from "@/store";
 import { useNavigate } from "react-router-dom";
+import { css } from "@emotion/react";
+
+console.log(css());
 
 interface IProps {}
 
-const useStyles = makeStyles((theme) =>
-  createStyles({
-    root: {},
-    logoBox: {
-      height: "20rem",
-      backgroundColor: "#eee",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    logo: {
-      backgroundColor: "#eff",
-      width: "10rem",
-      height: "10rem",
-      borderRadius: "50%",
-    },
-    selectBox: {
-      marginTop: "5rem",
-      textAlign: "center",
-    },
-    enterBox: {
-      marginTop: "9rem",
-      textAlign: "center",
-    },
-  })
-);
-
 const Login: React.FC<IProps> = (props) => {
-  const classes = useStyles();
+  const classes = {};
   const [id, setId] = useState(1);
 
   const setCurrentUser = useGlobalStore((state) => state.setCurrentUser);
@@ -56,7 +30,7 @@ const Login: React.FC<IProps> = (props) => {
     queryFn: () => allAPI.getUsers(),
   });
 
-  const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+  const handleChange = (event: any) => {
     setId(event.target.value as number);
   };
 

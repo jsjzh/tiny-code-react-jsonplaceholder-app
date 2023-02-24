@@ -5,7 +5,10 @@
 ## 待办
 
 1. [ ] 升级 UI 到 5.x 版本
-   1. https://mui.com/material-ui/getting-started/installation/
+   1. https://mui.com/material-ui/getting-started/installation/ | Installation - Material UI
+   2. https://styled-components.com/ | styled-components
+   3. https://styled-components.com/docs/basics# | styled-components: Basics
+   4. https://emotion.sh/docs/install | Emotion – Install
 2. [ ] 登录页
 3. [ ] 文章列表页
 4. [ ] 文章详情页
@@ -21,7 +24,7 @@
 3. react-router-dom
 4. react-qurey axios ~~swr~~
 5. zustand ~~jotai valtio RTK~~
-6. lodash immer use-immer
+6. ramda immer use-immer ~~lodash~~
 7. ahooks react-dnd
 
 animation: framer-motion + Three.js
