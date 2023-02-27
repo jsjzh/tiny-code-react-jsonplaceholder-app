@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Box,
   Button,
   FormControl,
   InputLabel,
@@ -10,36 +11,6 @@ import { useQuery } from "@tanstack/react-query";
 import { allAPI } from "@/api";
 import { useGlobalStore } from "@/store";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
-
-const PageRoot = styled.div``;
-
-const PageLogoBox = styled.div`
-  height: 20rem;
-  background-color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const PageLogo = styled.div`
-  background-color: #eff;
-  width: 10rem;
-  height: 10rem;
-  line-height: 10rem;
-  text-align: center;
-  border-radius: 50%;
-`;
-
-const PageSelectBox = styled.div`
-  margin-top: 10rem;
-  text-align: center;
-`;
-
-const PageEnterBox = styled.div`
-  margin-top: 10rem;
-  text-align: center;
-`;
 
 interface IProps {}
 
@@ -66,12 +37,36 @@ const Login: React.FC<IProps> = (props) => {
   }
 
   return (
-    <PageRoot>
-      <PageLogoBox>
-        <PageLogo>Hello World</PageLogo>
-      </PageLogoBox>
+    <Box>
+      <Box
+        sx={{
+          height: "20rem",
+          backgroundColor: "#eee",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          sx={{
+            backgroundColor: "#eff",
+            width: "10rem",
+            height: "10rem",
+            lineHeight: "10rem",
+            textAlign: "center",
+            borderRadius: "50%",
+          }}
+        >
+          Hello World
+        </Box>
+      </Box>
 
-      <PageSelectBox>
+      <Box
+        sx={{
+          mt: 20,
+          textAlign: "center",
+        }}
+      >
         <FormControl style={{ width: "80%" }}>
           <InputLabel id="select-user">选择用户</InputLabel>
           <Select
@@ -87,9 +82,14 @@ const Login: React.FC<IProps> = (props) => {
             ))}
           </Select>
         </FormControl>
-      </PageSelectBox>
+      </Box>
 
-      <PageEnterBox>
+      <Box
+        sx={{
+          mt: 20,
+          textAlign: "center",
+        }}
+      >
         <Button
           style={{ width: "80%" }}
           variant="contained"
@@ -98,8 +98,8 @@ const Login: React.FC<IProps> = (props) => {
         >
           login
         </Button>
-      </PageEnterBox>
-    </PageRoot>
+      </Box>
+    </Box>
   );
 };
 

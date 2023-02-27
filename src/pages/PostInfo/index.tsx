@@ -30,8 +30,6 @@ const PostInfo: React.FC<IProps> = (props) => {
       ]),
   });
 
-  console.log(data);
-
   if (isLoading) {
     return <></>;
   }
@@ -40,12 +38,8 @@ const PostInfo: React.FC<IProps> = (props) => {
     <PageWrapper>
       <Card>
         <CardContent>
-          <Typography variant="h5" gutterBottom>
-            {data?.[0].title}
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            {data?.[0].body}
-          </Typography>
+          <Typography variant="h5">{data?.[0].title}</Typography>
+          <Typography variant="body1">{data?.[0].body}</Typography>
         </CardContent>
       </Card>
       <List>
