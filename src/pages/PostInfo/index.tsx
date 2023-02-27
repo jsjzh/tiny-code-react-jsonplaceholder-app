@@ -47,9 +47,6 @@ const PostInfo: React.FC<IProps> = (props) => {
         {data?.[1].map((item) => (
           <ListItem key={item.id}>
             <ListItemButton>
-              <ListItemAvatar>
-                <Avatar>{item.email}</Avatar>
-              </ListItemAvatar>
               <ListItemText
                 primary={item.name}
                 secondary={

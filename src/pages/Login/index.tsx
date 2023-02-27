@@ -40,7 +40,7 @@ const Login: React.FC<IProps> = (props) => {
     <Box>
       <Box
         sx={{
-          height: "20rem",
+          height: "40vh",
           backgroundColor: "#eee",
           display: "flex",
           justifyContent: "center",
@@ -50,20 +50,20 @@ const Login: React.FC<IProps> = (props) => {
         <Box
           sx={{
             backgroundColor: "#eff",
-            width: "10rem",
-            height: "10rem",
-            lineHeight: "10rem",
+            width: "20vw",
+            height: "20vw",
+            lineHeight: "20vw",
             textAlign: "center",
             borderRadius: "50%",
           }}
         >
-          Hello World
+          Hi
         </Box>
       </Box>
 
       <Box
         sx={{
-          mt: 20,
+          mt: "20vh",
           textAlign: "center",
         }}
       >
@@ -86,7 +86,7 @@ const Login: React.FC<IProps> = (props) => {
 
       <Box
         sx={{
-          mt: 20,
+          mt: "20vh",
           textAlign: "center",
         }}
       >
