@@ -9,14 +9,13 @@ import {
 } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { allAPI } from "@/api";
-import Loading from "@/components/Loading";
 import { useGlobalStore } from "@/store";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-const Root = styled.div``;
+const PageRoot = styled.div``;
 
-const LogoBox = styled.div`
+const PageLogoBox = styled.div`
   height: 20rem;
   background-color: #eee;
   display: flex;
@@ -24,86 +23,83 @@ const LogoBox = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.div`
+const PageLogo = styled.div`
   background-color: #eff;
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
 `;
 
-const SelectBox = styled.div`
-  margin-top: 5rem;
+const PageSelectBox = styled.div`
+  margin-top: 10rem;
   text-align: center;
 `;
 
-const EnterBox = styled.div`
-  margin-top: 9rem;
+const PageEnterBox = styled.div`
+  margin-top: 10rem;
   text-align: center;
 `;
 
 interface IProps {}
 
 const Login: React.FC<IProps> = (props) => {
-  const classes = {};
-  const [id, setId] = useState(1);
-
   const setCurrentUser = useGlobalStore((state) => state.setCurrentUser);
   const navigate = useNavigate();
+  const [currentId, setCurrentId] = useState<React.Key>();
 
   const { data, isLoading } = useQuery({
     queryKey: ["getUsers"],
     queryFn: () => allAPI.getUsers(),
+    onSuccess(data) {
+      setCurrentId(data[0].id);
+    },
   });
 
-  const handleChange = (event: any) => {
-    setId(event.target.value as number);
-  };
-
   const handleLogin = () => {
-    setCurrentUser(data?.find((item) => item.id === id) || {});
+    setCurrentUser(data?.find((item) => item.id === currentId) || {});
     navigate("/");
   };
 
+  if (isLoading) {
+    return <></>;
+  }
+
   return (
     <PageWrapper>
-      <Root>
-        <LogoBox>
-          <Logo />
-        </LogoBox>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <div>
-            <SelectBox>
-              <FormControl style={{ width: "80%" }}>
-                <InputLabel id="select-user">选择用户</InputLabel>
-                <Select
-                  labelId="select-user"
-                  value={id}
-                  onChange={handleChange}
-                >
-                  {data?.map((item) => (
-                    <MenuItem key={item.id} value={item.id}>
-                      {item.name}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </SelectBox>
+      <PageRoot>
+        <PageLogoBox>
+          <PageLogo />
+        </PageLogoBox>
 
-            <EnterBox>
-              <Button
-                style={{ width: "80%" }}
-                variant="contained"
-                color="primary"
-                onClick={handleLogin}
-              >
-                login
-              </Button>
-            </EnterBox>
-          </div>
-        )}
-      </Root>
+        <PageSelectBox>
+          <FormControl style={{ width: "80%" }}>
+            <InputLabel id="select-user">选择用户</InputLabel>
+            <Select
+              labelId="select-user"
+              label="选择用户"
+              value={currentId}
+              onChange={(e) => setCurrentId(e.target.value)}
+            >
+              {data?.map((item) => (
+                <MenuItem key={item.id} value={item.id}>
+                  {item.name}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </PageSelectBox>
+
+        <PageEnterBox>
+          <Button
+            style={{ width: "80%" }}
+            variant="contained"
+            color="primary"
+            onClick={handleLogin}
+          >
+            login
+          </Button>
+        </PageEnterBox>
+      </PageRoot>
     </PageWrapper>
   );
 };
