@@ -68,12 +68,12 @@ const Login: React.FC<IProps> = (props) => {
     <PageWrapper>
       <Root>
         <LogoBox>
-          <Logo>logo</Logo>
+          <Logo />
         </LogoBox>
         {isLoading ? (
           <Loading />
         ) : (
-          <>
+          <div>
             <SelectBox>
               <FormControl style={{ width: "80%" }}>
                 <InputLabel id="select-user">选择用户</InputLabel>
@@ -101,7 +101,7 @@ const Login: React.FC<IProps> = (props) => {
                 login
               </Button>
             </EnterBox>
-          </>
+          </div>
         )}
       </Root>
     </PageWrapper>
