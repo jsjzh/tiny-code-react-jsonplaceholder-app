@@ -7,6 +7,8 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  ImageList,
+  ImageListItem,
   Typography,
 } from "@mui/material";
 import PageWrapper from "@/components/PageWrapper";
@@ -30,21 +32,19 @@ const AlbumInfo: React.FC<IProps> = (props) => {
 
   return (
     <PageWrapper>
-      {data?.map((item) => (
-        <Box key={item.id} sx={{ mb: 5 }}>
-          <Card raised>
-            <CardMedia component="img" height="194" image={item.thumbnailUrl} />
-            <CardContent>
-              <Typography variant="body1">{item.title}</Typography>
-            </CardContent>
-            <CardActions>
-              <Button href={item.url} target="_blank">
-                link
-              </Button>
-            </CardActions>
-          </Card>
-        </Box>
-      ))}
+      <Box>
+        <ImageList>
+          {data ? (
+            data.map((item) => (
+              <ImageListItem key={item.id}>
+                <img src={item.url} srcSet={item.thumbnailUrl} />
+              </ImageListItem>
+            ))
+          ) : (
+            <></>
+          )}
+        </ImageList>
+      </Box>
     </PageWrapper>
   );
 };
