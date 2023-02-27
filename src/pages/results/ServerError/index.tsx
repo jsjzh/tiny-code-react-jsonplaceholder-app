@@ -1,12 +1,11 @@
 import React from "react";
 
+import { Box } from "@mui/material";
 import PageWrapper from "@/components/PageWrapper";
-
-import "./index.css";
 
 const ServerError: React.FC = () => (
   <PageWrapper>
-    <div>500 ServerError</div>
+    <Box>500 ServerError</Box>
   </PageWrapper>
 );
 

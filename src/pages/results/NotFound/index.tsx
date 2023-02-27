@@ -1,12 +1,11 @@
 import React from "react";
 
+import { Box } from "@mui/material";
 import PageWrapper from "@/components/PageWrapper";
-
-import "./index.css";
 
 const NotFound: React.FC = () => (
   <PageWrapper>
-    <div>404 NotFound</div>
+    <Box>404 NotFound</Box>
   </PageWrapper>
 );
 

@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Box } from "@mui/material";
 import PageWrapper from "@/components/PageWrapper";
 
 interface IProps {}
@@ -7,7 +8,7 @@ interface IProps {}
 const Template: React.FC<IProps> = (props) => {
   return (
     <PageWrapper>
-      <div>Template</div>
+      <Box>Template</Box>
     </PageWrapper>
   );
 };

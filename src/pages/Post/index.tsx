@@ -33,15 +33,23 @@ const Post: React.FC<IProps> = (props) => {
 
   return (
     <PageWrapper>
-      <List>
+      <List disablePadding>
         {data?.map((item) => (
           <ListItemButton key={item.id} onClick={() => handleClick(item)}>
             <ListItemAvatar>
               <Avatar>{item.userId}</Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary={<Typography noWrap variant="h6">{item.title}</Typography>}
-              secondary={<Typography noWrap variant="subtitle1">{item.body}</Typography>}
+              primary={
+                <Typography noWrap variant="h6">
+                  {item.title}
+                </Typography>
+              }
+              secondary={
+                <Typography noWrap variant="subtitle1">
+                  {item.body}
+                </Typography>
+              }
             />
           </ListItemButton>
         ))}

@@ -42,7 +42,7 @@ const PostInfo: React.FC<IProps> = (props) => {
           <Typography variant="body1">{data?.[0].body}</Typography>
         </CardContent>
       </Card>
-      <List>
+      <List disablePadding>
         {data?.[1].map((item) => (
           <ListItemButton key={item.id}>
             <ListItemAvatar>

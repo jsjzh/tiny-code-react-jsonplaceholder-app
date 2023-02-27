@@ -1,12 +1,11 @@
 import React from "react";
 
+import { Box } from "@mui/material";
 import PageWrapper from "@/components/PageWrapper";
-
-import "./index.css";
 
 const NotAuthorized: React.FC = () => (
   <PageWrapper>
-    <div>403 NotAuthorized</div>
+    <Box>403 NotAuthorized</Box>
   </PageWrapper>
 );
 

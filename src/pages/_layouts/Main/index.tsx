@@ -4,21 +4,30 @@ import {
   BottomNavigationAction,
   Box,
   Container,
-  CssBaseline,
   Paper,
 } from "@mui/material";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useGlobalStore } from "@/store";
 
-import { FavoriteBorderOutlined } from "@mui/icons-material";
+import {
+  AlbumOutlined,
+  PostAddOutlined,
+  SettingsApplicationsOutlined,
+  TodayOutlined,
+} from "@mui/icons-material";
 
 interface IProps {}
 
 const navs = [
-  { label: "post", path: "/", icon: <FavoriteBorderOutlined /> },
-  { label: "album", path: "/album", icon: <FavoriteBorderOutlined /> },
-  { label: "todo", path: "/todo", icon: <FavoriteBorderOutlined /> },
-  { label: "user", path: "/user", icon: <FavoriteBorderOutlined /> },
+  { label: "POST", value: "post", path: "/", icon: <PostAddOutlined /> },
+  { label: "ALBUM", value: "album", path: "/album", icon: <AlbumOutlined /> },
+  { label: "TODO", value: "todo", path: "/todo", icon: <TodayOutlined /> },
+  {
+    label: "USER",
+    value: "user",
+    path: "/user",
+    icon: <SettingsApplicationsOutlined />,
+  },
 ];
 
 const Main: React.FC<IProps> = (props) => {
@@ -27,10 +36,10 @@ const Main: React.FC<IProps> = (props) => {
 
   const navigate = useNavigate();
 
-  const handleNavigate = (_: any, index: number) => {
-    const current = navs[index];
-    setCurrentPage(current.label);
-    navigate(`${current.path}`);
+  const handleNavigate = (_: any, value: string) => {
+    const current = navs.find((nav) => nav.value === value);
+    setCurrentPage(value);
+    navigate(`${current!.path}`);
   };
 
   useEffect(() => {
@@ -54,9 +63,10 @@ const Main: React.FC<IProps> = (props) => {
           >
             {navs.map((nav) => (
               <BottomNavigationAction
-                key={nav.label}
+                key={nav.value}
                 label={nav.label}
-                icon={<FavoriteBorderOutlined />}
+                value={nav.value}
+                icon={nav.icon}
               />
             ))}
           </BottomNavigation>

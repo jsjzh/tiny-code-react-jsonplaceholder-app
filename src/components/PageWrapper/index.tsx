@@ -1,4 +1,5 @@
 import React from "react";
+import { Box } from "@mui/material";
 
 type IPageWrapperProps = {
   style?: React.CSSProperties;
@@ -6,7 +7,7 @@ type IPageWrapperProps = {
 };
 
 const PageWrapper: React.FC<IPageWrapperProps> = (props) => (
-  <div style={props.style}>{props.children}</div>
+  <Box style={props.style}>{props.children}</Box>
 );
 
 export default PageWrapper;
