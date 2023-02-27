@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PageWrapper from "@/components/PageWrapper";
 import {
   Button,
   FormControl,
@@ -27,6 +26,8 @@ const PageLogo = styled.div`
   background-color: #eff;
   width: 10rem;
   height: 10rem;
+  line-height: 10rem;
+  text-align: center;
   border-radius: 50%;
 `;
 
@@ -45,7 +46,7 @@ interface IProps {}
 const Login: React.FC<IProps> = (props) => {
   const setCurrentUser = useGlobalStore((state) => state.setCurrentUser);
   const navigate = useNavigate();
-  const [currentId, setCurrentId] = useState<React.Key>();
+  const [currentId, setCurrentId] = useState<React.Key>(1);
 
   const { data, isLoading } = useQuery({
     queryKey: ["getUsers"],
@@ -65,42 +66,40 @@ const Login: React.FC<IProps> = (props) => {
   }
 
   return (
-    <PageWrapper>
-      <PageRoot>
-        <PageLogoBox>
-          <PageLogo />
-        </PageLogoBox>
+    <PageRoot>
+      <PageLogoBox>
+        <PageLogo>Hello World</PageLogo>
+      </PageLogoBox>
 
-        <PageSelectBox>
-          <FormControl style={{ width: "80%" }}>
-            <InputLabel id="select-user">选择用户</InputLabel>
-            <Select
-              labelId="select-user"
-              label="选择用户"
-              value={currentId}
-              onChange={(e) => setCurrentId(e.target.value)}
-            >
-              {data?.map((item) => (
-                <MenuItem key={item.id} value={item.id}>
-                  {item.name}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </PageSelectBox>
-
-        <PageEnterBox>
-          <Button
-            style={{ width: "80%" }}
-            variant="contained"
-            color="primary"
-            onClick={handleLogin}
+      <PageSelectBox>
+        <FormControl style={{ width: "80%" }}>
+          <InputLabel id="select-user">选择用户</InputLabel>
+          <Select
+            labelId="select-user"
+            label="选择用户"
+            value={currentId}
+            onChange={(e) => setCurrentId(e.target.value)}
           >
-            login
-          </Button>
-        </PageEnterBox>
-      </PageRoot>
-    </PageWrapper>
+            {data?.map((item) => (
+              <MenuItem key={item.id} value={item.id}>
+                {item.name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </PageSelectBox>
+
+      <PageEnterBox>
+        <Button
+          style={{ width: "80%" }}
+          variant="contained"
+          color="primary"
+          onClick={handleLogin}
+        >
+          login
+        </Button>
+      </PageEnterBox>
+    </PageRoot>
   );
 };
 

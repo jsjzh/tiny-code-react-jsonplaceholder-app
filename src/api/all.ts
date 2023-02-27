@@ -5,10 +5,10 @@ const api = createAPI(import.meta.env.VITE_JSONPLACEHOLDER_TYPICODE_COM);
 export const getPosts = () => api.getJSON<D.Post[]>("/posts");
 
 export const getPost = (data: { id: number }) =>
-  api.getJSON<D.Post[]>(`/posts/${data.id}`);
+  api.getJSON<D.Post>(`/posts/${data.id}`);
 
 export const getPostComments = (data: { id: number }) =>
-  api.getJSON<D.Post[]>(`/posts/${data.id}/comments`);
+  api.getJSON<D.Comment[]>(`/posts/${data.id}/comments`);
 
 export const getComments = () => api.getJSON<D.Comment[]>("/comments");
 
