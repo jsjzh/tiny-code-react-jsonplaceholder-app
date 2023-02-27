@@ -10,6 +10,7 @@ import {
   Card,
   CardContent,
   List,
+  ListItem,
   ListItemAvatar,
   ListItemButton,
   ListItemText,
@@ -44,20 +45,22 @@ const PostInfo: React.FC<IProps> = (props) => {
       </Card>
       <List disablePadding>
         {data?.[1].map((item) => (
-          <ListItemButton key={item.id}>
-            <ListItemAvatar>
-              <Avatar>{item.email}</Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              primary={item.name}
-              secondary={
-                <Box>
-                  <Box>{item.body}</Box>
-                  <Box sx={{ mt: 2, textAlign: "right" }}>{item.email}</Box>
-                </Box>
-              }
-            />
-          </ListItemButton>
+          <ListItem key={item.id}>
+            <ListItemButton>
+              <ListItemAvatar>
+                <Avatar>{item.email}</Avatar>
+              </ListItemAvatar>
+              <ListItemText
+                primary={item.name}
+                secondary={
+                  <Box>
+                    <Box>{item.body}</Box>
+                    <Box sx={{ mt: 2, textAlign: "right" }}>{item.email}</Box>
+                  </Box>
+                }
+              />
+            </ListItemButton>
+          </ListItem>
         ))}
       </List>
     </PageWrapper>

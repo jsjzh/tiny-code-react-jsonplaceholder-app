@@ -7,6 +7,7 @@ import {
   Avatar,
   Box,
   List,
+  ListItem,
   ListItemAvatar,
   ListItemButton,
   ListItemText,
@@ -36,12 +37,14 @@ const Album: React.FC<IProps> = (props) => {
       <Box>
         <List disablePadding>
           {data?.map((item) => (
-            <ListItemButton key={item.id} onClick={() => handleClick(item.id)}>
-              <ListItemAvatar>
-                <Avatar>{item.userId}</Avatar>
-              </ListItemAvatar>
-              <ListItemText primary={item.title} />
-            </ListItemButton>
+            <ListItem key={item.id}>
+              <ListItemButton onClick={() => handleClick(item.id)}>
+                <ListItemAvatar>
+                  <Avatar>{item.userId}</Avatar>
+                </ListItemAvatar>
+                <ListItemText primary={item.title} />
+              </ListItemButton>
+            </ListItem>
           ))}
         </List>
       </Box>

@@ -6,6 +6,7 @@ import { allAPI } from "@/api";
 import {
   Avatar,
   List,
+  ListItem,
   ListItemAvatar,
   ListItemButton,
   ListItemText,
@@ -35,23 +36,25 @@ const Post: React.FC<IProps> = (props) => {
     <PageWrapper>
       <List disablePadding>
         {data?.map((item) => (
-          <ListItemButton key={item.id} onClick={() => handleClick(item)}>
-            <ListItemAvatar>
-              <Avatar>{item.userId}</Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              primary={
-                <Typography noWrap variant="h6">
-                  {item.title}
-                </Typography>
-              }
-              secondary={
-                <Typography noWrap variant="subtitle1">
-                  {item.body}
-                </Typography>
-              }
-            />
-          </ListItemButton>
+          <ListItem key={item.id}>
+            <ListItemButton onClick={() => handleClick(item)}>
+              <ListItemAvatar>
+                <Avatar>{item.userId}</Avatar>
+              </ListItemAvatar>
+              <ListItemText
+                primary={
+                  <Typography noWrap variant="h6">
+                    {item.title}
+                  </Typography>
+                }
+                secondary={
+                  <Typography noWrap variant="subtitle1">
+                    {item.body}
+                  </Typography>
+                }
+              />
+            </ListItemButton>
+          </ListItem>
         ))}
       </List>
     </PageWrapper>
