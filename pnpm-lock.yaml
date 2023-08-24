@@ -10,10 +10,10 @@ dependencies:
     version: 4.5.8
   '@mui/icons-material':
     specifier: ^5.14.3
-    version: 5.14.3(@mui/material@5.14.5)(@types/react@18.2.20)(react@18.2.0)
+    version: 5.14.3(@mui/material@5.14.5)(@types/react@18.2.21)(react@18.2.0)
   '@mui/material':
     specifier: ^5.14.5
-    version: 5.14.5(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+    version: 5.14.5(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
   '@mui/styled-engine-sc':
     specifier: ^5.12.0
     version: 5.12.0(@types/styled-components@5.1.26)(styled-components@5.3.11)
@@ -55,21 +55,21 @@ dependencies:
     version: 0.8.1(immer@9.0.21)(react@18.2.0)
   zustand:
     specifier: ^4.4.1
-    version: 4.4.1(@types/react@18.2.20)(immer@9.0.21)(react@18.2.0)
+    version: 4.4.1(@types/react@18.2.21)(immer@9.0.21)(react@18.2.0)
 
 devDependencies:
   '@types/jsonp':
     specifier: ^0.2.1
     version: 0.2.1
   '@types/node':
-    specifier: ^18.17.6
-    version: 18.17.6
+    specifier: ^18.17.9
+    version: 18.17.9
   '@types/ramda':
     specifier: ^0.28.25
     version: 0.28.25
   '@types/react':
-    specifier: ^18.2.20
-    version: 18.2.20
+    specifier: ^18.2.21
+    version: 18.2.21
   '@types/react-dom':
     specifier: ^18.2.7
     version: 18.2.7
@@ -99,7 +99,7 @@ devDependencies:
     version: 4.9.5
   vite:
     specifier: ^4.4.9
-    version: 4.4.9(@types/node@18.17.6)
+    version: 4.4.9(@types/node@18.17.9)
 
 packages:
 
@@ -699,7 +699,7 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@mui/base@5.0.0-beta.11(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+  /@mui/base@5.0.0-beta.11(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-FdKZGPd8qmC3ZNke7CNhzcEgToc02M6WYZc9hcBsNQ17bgAd3s9F//1bDDYgMVBYxDM71V0sv/hBHlOY4I1ZVA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -712,10 +712,10 @@ packages:
     dependencies:
       '@babel/runtime': 7.22.6
       '@emotion/is-prop-valid': 1.2.1
-      '@mui/types': 7.2.4(@types/react@18.2.20)
+      '@mui/types': 7.2.4(@types/react@18.2.21)
       '@mui/utils': 5.14.5(react@18.2.0)
       '@popperjs/core': 2.11.8
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       clsx: 2.0.0
       prop-types: 15.8.1
       react: 18.2.0
@@ -727,7 +727,7 @@ packages:
     resolution: {integrity: sha512-+wpGH1USwPcKMFPMvXqYPC6fEvhxM3FzxC8lyDiNK/imLyyJ6y2DPb1Oue7OGIKJWBmYBqrWWtfovrxd1aJHTA==}
     dev: false
 
-  /@mui/icons-material@5.14.3(@mui/material@5.14.5)(@types/react@18.2.20)(react@18.2.0):
+  /@mui/icons-material@5.14.3(@mui/material@5.14.5)(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-XkxWPhageu1OPUm2LWjo5XqeQ0t2xfGe8EiLkRW9oz2LHMMZmijvCxulhgquUVTF1DnoSh+3KoDLSsoAFtVNVw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -739,12 +739,12 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.22.6
-      '@mui/material': 5.14.5(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
-      '@types/react': 18.2.20
+      '@mui/material': 5.14.5(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
+      '@types/react': 18.2.21
       react: 18.2.0
     dev: false
 
-  /@mui/material@5.14.5(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+  /@mui/material@5.14.5(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-4qa4GMfuZH0Ai3mttk5ccXP8a3sf7aPlAJwyMrUSz6h9hPri6BPou94zeu3rENhhmKLby9S/W1y+pmficy8JKA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -762,12 +762,12 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.22.6
-      '@mui/base': 5.0.0-beta.11(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/base': 5.0.0-beta.11(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
       '@mui/core-downloads-tracker': 5.14.5
-      '@mui/system': 5.14.5(@types/react@18.2.20)(react@18.2.0)
-      '@mui/types': 7.2.4(@types/react@18.2.20)
+      '@mui/system': 5.14.5(@types/react@18.2.21)(react@18.2.0)
+      '@mui/types': 7.2.4(@types/react@18.2.21)
       '@mui/utils': 5.14.5(react@18.2.0)
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       '@types/react-transition-group': 4.4.6
       clsx: 2.0.0
       csstype: 3.1.2
@@ -778,7 +778,7 @@ packages:
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
-  /@mui/private-theming@5.14.5(@types/react@18.2.20)(react@18.2.0):
+  /@mui/private-theming@5.14.5(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-cC4C5RrpXpDaaZyH9QwmPhRLgz+f2SYbOty3cPkk4qPSOSfif2ZEcDD9HTENKDDd9deB+xkPKzzZhi8cxIx8Ig==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -790,7 +790,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.22.6
       '@mui/utils': 5.14.5(react@18.2.0)
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       prop-types: 15.8.1
       react: 18.2.0
     dev: false
@@ -831,7 +831,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@mui/system@5.14.5(@types/react@18.2.20)(react@18.2.0):
+  /@mui/system@5.14.5(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-mextXZHDeGcR7E1kx43TRARrVXy+gI4wzpUgNv7MqZs1dvTVXQGVeAT6ydj9d6FUqHBPMNLGV/21vJOrpqsL+w==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -848,18 +848,18 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.22.6
-      '@mui/private-theming': 5.14.5(@types/react@18.2.20)(react@18.2.0)
+      '@mui/private-theming': 5.14.5(@types/react@18.2.21)(react@18.2.0)
       '@mui/styled-engine': 5.13.2(react@18.2.0)
-      '@mui/types': 7.2.4(@types/react@18.2.20)
+      '@mui/types': 7.2.4(@types/react@18.2.21)
       '@mui/utils': 5.14.5(react@18.2.0)
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       clsx: 2.0.0
       csstype: 3.1.2
       prop-types: 15.8.1
       react: 18.2.0
     dev: false
 
-  /@mui/types@7.2.4(@types/react@18.2.20):
+  /@mui/types@7.2.4(@types/react@18.2.21):
     resolution: {integrity: sha512-LBcwa8rN84bKF+f5sDyku42w1NTxaPgPyYKODsh01U1fVstTClbUoSA96oyRBnSNyEiAVjKm6Gwx9vjR+xyqHA==}
     peerDependencies:
       '@types/react': '*'
@@ -867,7 +867,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
     dev: false
 
   /@mui/utils@5.14.5(react@18.2.0):
@@ -939,7 +939,7 @@ packages:
   /@types/hoist-non-react-statics@3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       hoist-non-react-statics: 3.3.2
 
   /@types/json-schema@7.0.12:
@@ -950,8 +950,8 @@ packages:
     resolution: {integrity: sha512-5OZzjBntljpajg4RmydvZEyYCjiVVq6AZOm/TVIxSb7FiySOur3B/YcUEtdoy01FEzwiiUP7qLtUE6qiOF/kfQ==}
     dev: true
 
-  /@types/node@18.17.6:
-    resolution: {integrity: sha512-fGmT/P7z7ecA6bv/ia5DlaWCH4YeZvAQMNpUhrJjtAhOhZfoxS1VLUgU2pdk63efSjQaOJWdXMuAJsws+8I6dg==}
+  /@types/node@18.17.9:
+    resolution: {integrity: sha512-fxaKquqYcPOGwE7tC1anJaPJ0GHyOVzfA2oUoXECjBjrtsIz4YJvtNYsq8LUcjEUehEF+jGpx8Z+lFrtT6z0tg==}
     dev: true
 
   /@types/prop-types@15.7.5:
@@ -966,23 +966,23 @@ packages:
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
     dev: true
 
   /@types/react-is@18.2.1:
     resolution: {integrity: sha512-wyUkmaaSZEzFZivD8F2ftSyAfk6L+DfFliVj/mYdOXbVjRcS87fQJLTnhk6dRZPuJjI+9g6RZJO4PNCngUrmyw==}
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
     dev: false
 
   /@types/react-transition-group@4.4.6:
     resolution: {integrity: sha512-VnCdSxfcm08KjsJVQcfBmhEQAPnLB8G08hAxn39azX1qYBQ/5RVQuoHuKIcfKOdncuaUvEpFKFzEvbtIMsfVew==}
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
     dev: false
 
-  /@types/react@18.2.20:
-    resolution: {integrity: sha512-WKNtmsLWJM/3D5mG4U84cysVY31ivmyw85dE84fOCk5Hx78wezB/XEjVPWl2JTZ5FkEeaTJf+VgUAUn3PE7Isw==}
+  /@types/react@18.2.21:
+    resolution: {integrity: sha512-neFKG/sBAwGxHgXiIxnbm3/AAVQ/cMRS93hvBpg8xYRbeQSPVABp9U2bRnPf0iI4+Ucdv3plSxKK+3CW2ENJxA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -999,7 +999,7 @@ packages:
     resolution: {integrity: sha512-KuKJ9Z6xb93uJiIyxo/+ksS7yLjS1KzG6iv5i78dhVg/X3u5t1H7juRWqVmodIdz6wGVaIApo1u01kmFRdJHVw==}
     dependencies:
       '@types/hoist-non-react-statics': 3.3.1
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       csstype: 3.1.1
 
   /@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.47.0)(typescript@4.9.5):
@@ -1143,7 +1143,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6(@babel/core@7.20.12)
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.4.9(@types/node@18.17.6)
+      vite: 4.4.9(@types/node@18.17.9)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3104,7 +3104,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /vite@4.4.9(@types/node@18.17.6):
+  /vite@4.4.9(@types/node@18.17.9):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3132,7 +3132,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.17.6
+      '@types/node': 18.17.9
       esbuild: 0.18.11
       postcss: 8.4.27
       rollup: 3.27.2
@@ -3213,7 +3213,7 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zustand@4.4.1(@types/react@18.2.20)(immer@9.0.21)(react@18.2.0):
+  /zustand@4.4.1(@types/react@18.2.21)(immer@9.0.21)(react@18.2.0):
     resolution: {integrity: sha512-QCPfstAS4EBiTQzlaGP1gmorkh/UL1Leaj2tdj+zZCZ/9bm0WS7sI2wnfD5lpOszFqWJ1DcPnGoY8RDL61uokw==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -3228,7 +3228,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       immer: 9.0.21
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
