@@ -44,11 +44,11 @@
   },
   "devDependencies": {
     "@types/jsonp": "^0.2.1",
-    "@types/node": "^18.17.19",
+    "@types/node": "^18.18.0",
     "@types/ramda": "^0.28.25",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
-    "@types/styled-components": "^5.1.27",
+    "@types/styled-components": "^5.1.28",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react": "^3.1.0",
