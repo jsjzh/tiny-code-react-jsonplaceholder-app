@@ -25,11 +25,11 @@
   "homepage": "https://github.com/jsjzh/tiny-code-react-jsonplaceholder-app#readme",
   "dependencies": {
     "@fontsource/roboto": "^4.5.8",
-    "@mui/icons-material": "^5.15.1",
-    "@mui/material": "^5.15.1",
+    "@mui/icons-material": "^5.15.2",
+    "@mui/material": "^5.15.2",
     "@mui/styled-engine-sc": "^5.14.12",
     "@tanstack/react-query": "^4.36.1",
-    "axios": "^1.6.2",
+    "axios": "^1.6.3",
     "immer": "^9.0.21",
     "jsonp": "^0.2.1",
     "normalize.css": "^8.0.1",
@@ -37,7 +37,7 @@
     "ramda": "^0.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.0",
+    "react-router-dom": "^6.21.1",
     "styled-components": "^5.3.11",
     "use-immer": "^0.8.1",
     "zustand": "^4.4.7"
